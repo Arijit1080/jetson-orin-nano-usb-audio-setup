@@ -1,0 +1,20 @@
+# ~/.asoundrc — make the USB audio codec the default playback + control device.
+#
+# Drop this file as ~/.asoundrc on the Jetson, e.g.:
+#   cp configs/asoundrc-example ~/.asoundrc
+#
+# After this, any program that talks to default ALSA (aplay, sounddevice, ffmpeg
+# without -f, mpg123, etc.) routes to the USB codec at card 0.
+#
+# If your codec is NOT card 0 (check `aplay -l`), change `hw:0,0` and `card 0`
+# to match the actual card number.
+
+pcm.!default {
+    type plug
+    slave.pcm "hw:0,0"
+}
+
+ctl.!default {
+    type hw
+    card 0
+}
