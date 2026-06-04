@@ -282,7 +282,7 @@ Expected output:
 
 ## 📺 Companion YouTube video
 
-*Link added after publishing.* The video walks through every step on camera, including the "money shot" where the Jetson first speaks.
+*Link added after publishing.* 
 
 ---
 
